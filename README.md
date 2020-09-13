@@ -4,7 +4,8 @@
 根据初始化横竖屏状态来旋转角度，进行缩放比例调整
 
 # 使用方法
-1.npm install phaser-forcelandscape
+1.下载模板[phaser3-project-template](https://github.com/photonstorm/phaser3-project-template)
+2.安装 npm install phaser-forcelandscape
 
 
 ## BootScene.js    
@@ -23,19 +24,17 @@
 	      "PUSH ENTER TO START"
 	    );
 	    
-	    //gameobj添加组件方法
 	    startText.setOrigin(0.5, 0.5);
 	    startText.alpha = 1;
-	    //绑定事件前提，开启交互功能
 	    startText.setInteractive();
 	    startText.on("pointerup", function () {
 	      console.log("start game");
 	      window.game.scene.sleep("boot");
 	    });
-	    const flash = this.tweens.add({
+	    this.tweens.add({
 	      targets: [startText],
 	      props: {
-	    alpha: 0,
+	    	alpha: 0,
 	      },
 	      loop: -1,
 	      duration: 1000,
