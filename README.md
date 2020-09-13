@@ -3,6 +3,7 @@
 根据移动端横竖屏状态来旋转游戏场景（scene）
 根据初始化横竖屏状态来旋转角度，进行缩放比例调整
 
+
 ![](https://raw.githubusercontent.com/JingRen790838213/githubreadmeassets/master/7a89bc235b3c3bbaec732b6d6b4e24b.png)
 
 # 使用方法
