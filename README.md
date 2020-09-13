@@ -3,6 +3,8 @@
 根据移动端横竖屏状态来旋转游戏场景（scene）
 根据初始化横竖屏状态来旋转角度，进行缩放比例调整
 
+![](https://raw.githubusercontent.com/JingRen790838213/githubreadmeassets/master/7a89bc235b3c3bbaec732b6d6b4e24b.png)
+
 # 使用方法
 1.下载模板[phaser3-project-template](https://github.com/photonstorm/phaser3-project-template)
 2.安装 npm install phaser-forcelandscape
@@ -128,6 +130,6 @@
 
 1.竖屏
 
-![](https://raw.githubusercontent.com/JingRen790838213/phaser3-forcelandscape/master/7a89bc235b3c3bbaec732b6d6b4e24b.png)
+![](https://raw.githubusercontent.com/JingRen790838213/githubreadmeassets/master/7a89bc235b3c3bbaec732b6d6b4e24b.png)
 2.横屏
-![](https://raw.githubusercontent.com/JingRen790838213/phaser3-forcelandscape/master/e56e36056a86af75f43d072d7626916.png)
+![](https://raw.githubusercontent.com/JingRen790838213/githubreadmeassets/master/e56e36056a86af75f43d072d7626916.png)
