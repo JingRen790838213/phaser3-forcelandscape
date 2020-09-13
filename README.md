@@ -4,16 +4,49 @@
 根据初始化横竖屏状态来旋转角度，进行缩放比例调整
 
 # 使用方法
-1.npm install phaser3-landscapeScene
+1.npm install phaser-forcelandscape
 
 
 ## BootScene.js    
-	import ForceLandscapeScene from 'phaser3-landscapeScene';
-	
-	export default class BootScene extends ForceLandscapeScene{
-		····
-		
-	}
+    class BootScene extends ForceLandscapeScene {
+      constructor(props) {
+    	super();
+      }
+      preload() {
+    	this.load.image("logo", logoImg);
+      }
+      renderStartText() {
+	    const { width, height } = this.scale.baseSize;
+	    const startText = this.add.text(
+	      width / 2,
+	      height / 1.2,
+	      "PUSH ENTER TO START"
+	    );
+	    
+	    //gameobj添加组件方法
+	    startText.setOrigin(0.5, 0.5);
+	    startText.alpha = 1;
+	    //绑定事件前提，开启交互功能
+	    startText.setInteractive();
+	    startText.on("pointerup", function () {
+	      console.log("start game");
+	      window.game.scene.sleep("boot");
+	    });
+	    const flash = this.tweens.add({
+	      targets: [startText],
+	      props: {
+	    alpha: 0,
+	      },
+	      loop: -1,
+	      duration: 1000,
+	    });
+      }
+      create() {
+	    const { width, height } = this.scale.baseSize;
+	    this.add.image(width / 2, height / 2.4, "logo");
+	    this.renderStartText();
+	  }
+    }
 
 ## index.html
 	<!DOCTYPE html>
@@ -96,6 +129,6 @@
 
 1.竖屏
 
-![](https://xncake-1257311440.cos.ap-guangzhou.myqcloud.com/img/3bbcbb40-f598-11ea-b224-a7ba00f99d7e.png)
+![](https://raw.githubusercontent.com/JingRen790838213/phaser3-forcelandscape/master/7a89bc235b3c3bbaec732b6d6b4e24b.png)
 2.横屏
-![](https://xncake-1257311440.cos.ap-guangzhou.myqcloud.com/img/5b091f20-f598-11ea-8e28-7f8b1880c479.png)
+![](https://raw.githubusercontent.com/JingRen790838213/phaser3-forcelandscape/master/e56e36056a86af75f43d072d7626916.png)
